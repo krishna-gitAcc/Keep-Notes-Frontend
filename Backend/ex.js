@@ -1,3 +1,7 @@
+const bcrypt = require('bcryptjs');
+
+
+
 // // let p = new Promise((resolve, reject) =>{
 // //     let a = 2 + 1;
 // //     if(a===2){
@@ -128,3 +132,10 @@
 // }
 // doWork();
 
+var name = 'Krishna';
+var salt = bcrypt.genSaltSync(10);
+
+var encrypt = bcrypt.hashSync(name, salt);
+var encrypt2 = bcrypt.hashSync(name+'a', salt);
+console.log(encrypt);
+console.log(encrypt2);
