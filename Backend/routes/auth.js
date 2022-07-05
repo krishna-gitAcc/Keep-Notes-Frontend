@@ -8,6 +8,7 @@ const fetchuser = require('../middleware/fetchuser');
 
 
 
+
 const User = require("../models/User");
 
 
@@ -100,7 +101,7 @@ router.post('/getuser',fetchuser ,async (req, res) => {
 
 try {
     const userId = req.id
-    const user = await User.findById(userId).select("-password");
+    const user = await User.findById(userId).select("-password").populate("name");
     res.send(user);
 
 } catch (error) {
