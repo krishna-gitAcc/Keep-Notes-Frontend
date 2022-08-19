@@ -23,6 +23,7 @@ app.use("/api/auth",require('./routes/auth'));
 app.use('/api/notes', require("./routes/notes"));
 
 
+
 app.listen(process.env.PORT || port, () => {
-    console.log(`iNotebook backend listening on port ${port}`);
+    console.log(`iNotebook backend listening on port ${process.env.PORT || port}`);
 })

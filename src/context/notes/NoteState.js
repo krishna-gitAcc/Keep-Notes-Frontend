@@ -5,7 +5,7 @@ import NoteContext from "./noteContext";
 
 const NoteState = (props) => {
 
-    const host = "http://localhost:5000";
+    const host = "https://inotebook-krishna.herokuapp.com";
     const auth_token = localStorage.getItem('token');
     // console.log(localStorage.getItem('token'));
 
@@ -18,7 +18,7 @@ const NoteState = (props) => {
 
     // Get all notes API CALL
     const getNotes = async () => {
-        const response = await fetch('http://localhost:5000/api/notes/fetchallnotes', {
+        const response = await fetch(`${host}/api/notes/fetchallnotes`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
