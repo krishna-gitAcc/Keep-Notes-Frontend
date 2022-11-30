@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 export const Login = (props) => {
 
-    
 
-    const url = 'https://inotebook-krishna.herokuapp.com/api/auth/login'
+
+    const url = 'http://localhost:8000/api/auth/login'
 
     let navigate = useNavigate();
 

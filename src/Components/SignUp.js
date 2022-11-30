@@ -6,7 +6,7 @@ export const SignUp = (props) => {
 
     let navigate = useNavigate();
 
-    const url = "https://inotebook-krishna.herokuapp.com/api/auth/createuser"
+    const url = "http://localhost:8000/api/auth/createuser"
 
     const [credential, setCredential] = useState({ name: "", email: "", password: "", cpassword: "" });
 

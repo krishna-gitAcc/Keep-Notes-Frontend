@@ -5,7 +5,7 @@ import NoteContext from "./noteContext";
 
 const NoteState = (props) => {
 
-    const host = "https://inotebook-krishna.herokuapp.com";
+    const host = "http://localhost:8000";
     const auth_token = localStorage.getItem('token');
     // console.log(localStorage.getItem('token'));
 
